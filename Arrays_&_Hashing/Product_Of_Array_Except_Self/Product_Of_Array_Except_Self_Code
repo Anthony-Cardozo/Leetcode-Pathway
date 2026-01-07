@@ -16,3 +16,6 @@ class Solution {
         return pre;
     }
 }
+
+//By getting the prefix and suffix product of an index we can compute the product of array
+//except self in O(N) time instead of a O(N^2) brute force approach

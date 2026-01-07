@@ -11,3 +11,5 @@ class Solution {
         return new int[0];
     }
 }
+
+//A hashmap allows us to check if target - number at index exists previously

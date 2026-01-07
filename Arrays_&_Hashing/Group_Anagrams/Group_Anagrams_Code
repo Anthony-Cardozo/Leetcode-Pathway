@@ -21,3 +21,6 @@ class Solution {
         return list;
     }
 }
+
+//By converting the arrays of frequencies into strings we can store it in a hashmap
+//to map it to its anagrams

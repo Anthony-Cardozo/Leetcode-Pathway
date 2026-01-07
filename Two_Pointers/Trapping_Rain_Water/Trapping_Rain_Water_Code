@@ -1,0 +1,28 @@
+class Solution {
+    public int trap(int[] height) {
+        int l = 0, r = 0;
+        int total = 0;
+        int[] pre = new int[height.length];
+        int[] suf = new int[height.length];
+        int max = 0;
+        for (int i = 0; i < height.length; i++) {
+            max = Math.max(max, height[i]);
+            pre[i] = max;
+        }
+
+        max = 0;
+        for (int i = height.length - 1; i >= 0; i--) {
+            max = Math.max(max, height[i]);
+            suf[i] = max;
+        }
+
+        for (int i = 0; i < height.length; i++) {
+            total += Math.min(pre[i], suf[i]) - height[i];
+        }
+
+        return total;
+    }
+}
+
+//We make preffix and suffix arrays of the max height at each index, then we can calculate 
+//the amount of water at each index by taking the min height of pre and suf - height at this index

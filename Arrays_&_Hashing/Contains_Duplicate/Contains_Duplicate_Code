@@ -10,3 +10,6 @@ class Solution {
         return false;
     }
 }
+
+//Using a set allows us to check if a number already exists without going
+//through the whole list again

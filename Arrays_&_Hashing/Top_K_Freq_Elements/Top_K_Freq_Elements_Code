@@ -16,3 +16,6 @@ class Solution {
         return res;
     }
 }
+
+//We have a hashmap with the nums and its frequencies and we add all entries to a 
+//priorityqueue (max heap) and remove top k elements
